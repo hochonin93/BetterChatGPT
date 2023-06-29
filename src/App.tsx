@@ -10,6 +10,7 @@ import { ChatInterface } from '@type/chat';
 import { Theme } from '@type/theme';
 import ApiPopup from '@components/ApiPopup';
 import Toast from '@components/Toast';
+import Ads from '@components/Menu/Ads';
 
 function App() {
   const initialiseNewChat = useInitialiseNewChat();
@@ -80,6 +81,7 @@ function App() {
       <Chat />
       <ApiPopup />
       <Toast />
+      <Ads />
     </div>
   );
 }

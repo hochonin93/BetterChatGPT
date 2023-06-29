@@ -17,6 +17,7 @@ export interface ConfigSlice {
   markdownMode: boolean;
   countTotalTokens: boolean;
   totalTokenUsed: TotalTokenUsed;
+  hideAds: boolean;
   setOpenConfig: (openConfig: boolean) => void;
   setTheme: (theme: Theme) => void;
   setAutoTitle: (autoTitle: boolean) => void;
@@ -30,6 +31,7 @@ export interface ConfigSlice {
   setMarkdownMode: (markdownMode: boolean) => void;
   setCountTotalTokens: (countTotalTokens: boolean) => void;
   setTotalTokenUsed: (totalTokenUsed: TotalTokenUsed) => void;
+  setHideAds: (hideAds: boolean) => void;
 }
 
 export const createConfigSlice: StoreSlice<ConfigSlice> = (set, get) => ({
@@ -37,15 +39,16 @@ export const createConfigSlice: StoreSlice<ConfigSlice> = (set, get) => ({
   theme: 'dark',
   hideMenuOptions: false,
   hideSideMenu: false,
-  autoTitle: false,
+  autoTitle: true,
   enterToSubmit: true,
   advancedMode: true,
   defaultChatConfig: _defaultChatConfig,
   defaultSystemMessage: _defaultSystemMessage,
   inlineLatex: false,
   markdownMode: true,
-  countTotalTokens: false,
+  countTotalTokens: true,
   totalTokenUsed: {},
+  hideAds: false,
   setOpenConfig: (openConfig: boolean) => {
     set((prev: ConfigSlice) => ({
       ...prev,
@@ -122,6 +125,12 @@ export const createConfigSlice: StoreSlice<ConfigSlice> = (set, get) => ({
     set((prev: ConfigSlice) => ({
       ...prev,
       totalTokenUsed: totalTokenUsed,
+    }));
+  },
+  setHideAds: (hideAds: boolean) => {
+    set((prev: ConfigSlice) => ({
+      ...prev,
+      hideAds: hideAds,
     }));
   },
 });

@@ -7,12 +7,12 @@ import StopGeneratingButton from '@components/StopGeneratingButton/StopGeneratin
 
 const Chat = () => {
   const hideSideMenu = useStore((state) => state.hideSideMenu);
+  const hideAds = useStore((state) => state.hideAds);
 
   return (
     <div
-      className={`flex h-full flex-1 flex-col ${
-        hideSideMenu ? 'md:pl-0' : 'md:pl-[260px]'
-      }`}
+      className={`flex h-full flex-1 flex-col ${hideSideMenu ? 'md:pl-0' : 'md:pl-[260px]'
+        } ${hideAds ? 'md:pr-0' : 'md:pr-[260px]'}`}
     >
       <MobileBar />
       <main className='relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch flex-1'>
