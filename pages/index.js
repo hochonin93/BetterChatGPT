@@ -5,14 +5,14 @@ const IndexPage = () => {
     <div>
       <script
         type='module'
-        crossorigin
+        crossOrigin
         src='./dist/assets/index-092da2e0.js'
       ></script>
       <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css'></link>
       <script
         async
         src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9272842344184040'
-        crossorigin='anonymous'
+        crossOrigin='anonymous'
       ></script>
 
       <div id='root'></div>
