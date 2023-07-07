@@ -6,7 +6,7 @@ const IndexPage = () => {
       <script
         type='module'
         crossorigin
-        src='./dist/assets/index-099c6578.js'
+        src='./dist/assets/index-092da2e0.js'
       ></script>
       <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css'></link>
       <script
