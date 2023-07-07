@@ -36,6 +36,7 @@ const ConfigMenu = ({
       top_p: _topP,
       frequency_penalty: _frequencyPenalty,
       stream: true,
+      api_key: '',
     });
     setIsModalOpen(false);
   };

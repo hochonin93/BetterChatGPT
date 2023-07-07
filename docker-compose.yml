@@ -13,6 +13,4 @@ services:
       - ./services:/app/services
     ports:
       - 8095:3000
-    environment:
-      - 'OPENAI_API_KEY=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'
     command: "yarn run next"

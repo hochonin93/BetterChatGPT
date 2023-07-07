@@ -26,6 +26,7 @@ export interface ConfigInterface {
   top_p: number;
   frequency_penalty: number;
   stream: boolean;
+  api_key: string;
 }
 
 export interface ChatHistoryInterface {
