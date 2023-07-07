@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+  chatgpt:
+    build: .
+    volumes:
+      - ./pages:/app/pages
+      - ./public:/app/public
+      - ./components:/app/components
+      - ./styles:/app/styles
+      - ./utils:/app/utils
+      - ./types:/app/types
+      - ./services:/app/services
+    ports:
+      - 8095:3000
+    environment:
+      - 'OPENAI_API_KEY=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'
+    command: "yarn run next"
