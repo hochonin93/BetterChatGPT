@@ -31,6 +31,7 @@ const useSubmit = () => {
         }
 
         // other endpoints
+        _defaultChatConfig.stream = false
         data = await getChatCompletion(
           useStore.getState().apiEndpoint,
           message,
@@ -38,6 +39,7 @@ const useSubmit = () => {
         );
       } else if (apiKey) {
         // own apikey
+        _defaultChatConfig.stream = false
         data = await getChatCompletion(
           useStore.getState().apiEndpoint,
           message,

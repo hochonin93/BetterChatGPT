@@ -63,6 +63,7 @@ const ChatConfigPopup = ({
       top_p: _topP,
       presence_penalty: _presencePenalty,
       frequency_penalty: _frequencyPenalty,
+      stream: true,
     });
     setDefaultSystemMessage(_systemMessage);
     setIsModalOpen(false);
