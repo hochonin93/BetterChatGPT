@@ -25,8 +25,11 @@ const IndexPage = () => {
           sizes='16x16'
           href='favicon-16x16.png'
         />
-        <meta property='og:image' content='pexels-andrew-neel-15863044.jpg' />
-        <meta name='twitter:image' content='pexels-andrew-neel-15863044.jpg' />
+        <meta property='og:image' content='./pexels-andrew-neel-15863044.jpg' />
+        <meta
+          name='twitter:image'
+          content='./pexels-andrew-neel-15863044.jpg'
+        />
         <meta name='description' content='免費ChatGPT工具' />
         <meta name='twitter:description' content='免費ChatGPT工具' />
         <meta name='twitter:title' content='免費ChatGPT工具' />
