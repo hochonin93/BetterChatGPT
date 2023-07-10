@@ -6,46 +6,44 @@ import { NextSeo } from 'next-seo';
 const IndexPage = () => {
   return (
     <div>
-      <Head>
-        <NextSeo
-          title='免費ChatGPT工具'
-          description='免費ChatGPT工具'
-          openGraph={{
-            title: '免費ChatGPT工具',
-            description: '免費ChatGPT工具',
-            images: [
-              {
-                url: '/pexels-andrew-neel-15863044.jpg',
-              },
-            ],
-          }}
-          link={[
+      <NextSeo
+        title='免費ChatGPT工具'
+        description='免費ChatGPT工具'
+        openGraph={{
+          title: '免費ChatGPT工具',
+          description: '免費ChatGPT工具',
+          images: [
             {
-              rel: 'icon',
-              href: '/favicon-32x32.png',
+              url: '/pexels-andrew-neel-15863044.jpg',
             },
-          ]}
-        />
-        <meta charSet='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='apple-touch-icon.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='favicon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='favicon-16x16.png'
-        />
-      </Head>
+          ],
+        }}
+        link={[
+          {
+            rel: 'icon',
+            href: '/favicon-32x32.png',
+          },
+        ]}
+      />
+      <meta charSet='UTF-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='apple-touch-icon.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='favicon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='favicon-16x16.png'
+      />
       <Script
         type='module'
         crossOrigin='anonymous'
