@@ -57,14 +57,14 @@ const IndexPage = () => {
       />
       <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css' />
 
-      <Script src='https://www.googletagmanager.com/gtag/js?id=QF7NMMDD1C' />
+      <Script src='https://www.googletagmanager.com/gtag/js?id=G-QF7NMMDD1C' />
       <Script id='google-analytics'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'QF7NMMDD1C');
+          gtag('config', 'G-QF7NMMDD1C');
         `}
       </Script>
       <div>
