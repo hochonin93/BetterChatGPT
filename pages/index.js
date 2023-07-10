@@ -5,8 +5,8 @@ import Script from 'next/script';
 const IndexPage = () => {
   return (
     <div>
-      <Head>
-        <meta charset='UTF-8' />
+      <div>
+        <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link
           rel='apple-touch-icon'
@@ -37,13 +37,13 @@ const IndexPage = () => {
           crossOrigin='anonymous'
           src='./dist/assets/index-c19a1a20.js'
         />
-        <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css'></link>
+        <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css' />
         <Script
           async
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9272842344184040'
           crossOrigin='anonymous'
         />
-      </Head>
+      </div>
       <div>
         <div id='root'></div>
         <div id='modal-root'></div>
