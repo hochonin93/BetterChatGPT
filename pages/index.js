@@ -56,6 +56,17 @@ const IndexPage = () => {
         crossOrigin='anonymous'
       />
       <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css' />
+
+      <Script src='https://www.googletagmanager.com/gtag/js?id=QF7NMMDD1C' />
+      <Script id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'QF7NMMDD1C');
+        `}
+      </Script>
       <div>
         <div id='root'></div>
         <div id='modal-root'></div>
