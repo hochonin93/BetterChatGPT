@@ -24,21 +24,34 @@ export default async function createMessage(
     let body = req.body
     const api_key = req.body.api_key
     delete body.api_key
-    const decrypt_key = JSON.parse(decrypt(api_key))
-    const ho_key = process.env.VITE_KEY
-    if (ho_key !== decrypt_key.key) {
-        res.status(500).json({ error: '出現問題1' })
-    } else {
-        const listData = await redis.lrange('gpt', 0, -1);
-        const exists = listData.includes(api_key);
-        if (exists) {
-            res.status(500).json({ error: '出現問題2' })
-        } else {
-            await redis.lpush('gpt', api_key);
-        }
-    }
 
     try {
+        const decrypt_key = JSON.parse(decrypt(api_key))
+        const ho_key = process.env.VITE_KEY
+        if (ho_key !== decrypt_key.key) {
+            res.status(500).json({ error: '出現問題1' })
+            return
+        } else {
+            const listData = await redis.lrange('gpt', 0, -1);
+            const exists = listData.includes(api_key);
+            if (exists) {
+                res.status(500).json({ error: '出現問題2' })
+                return
+            } else {
+                await redis.lpush('gpt', api_key);
+            }
+        }
+    } catch {
+        let errorMessage = '出現問題3'
+        console.log(errorMessage)
+        res.status(500).json({ error: errorMessage })
+        return
+    }
+
+
+
+    try {
+        console.log(body.messages)
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -69,5 +82,6 @@ export default async function createMessage(
         res.end()
     } catch (error) {
         res.status(500).json({ error: error.message })
+        return
     }
 }
