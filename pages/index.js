@@ -58,15 +58,17 @@ const IndexPage = () => {
       <link rel='stylesheet' href='./dist/assets/index-0c0990c7.css' />
 
       <Script src='https://www.googletagmanager.com/gtag/js?id=G-QF7NMMDD1C' />
-      <Script id='google-analytics'>
-        {`
+      <Script
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
- 
           gtag('config', 'G-QF7NMMDD1C');
-        `}
-      </Script>
+        `,
+        }}
+      />
       <div>
         <div id='root'></div>
         <div id='modal-root'></div>
