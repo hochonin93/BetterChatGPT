@@ -29,6 +29,7 @@ WORKDIR /app
 # RUN npm ci
 COPY . .
 RUN npm install
+RUN npm run nbuild
 # RUN npm install --save nextjs-cors@latest
 # ---- Build ----
 # FROM dependencies AS build

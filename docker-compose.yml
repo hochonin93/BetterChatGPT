@@ -13,4 +13,4 @@ services:
       - ./services:/app/services
     ports:
       - 8095:3000
-    command: "yarn run next"
+    command: "npm run start"
