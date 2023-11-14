@@ -145,7 +145,7 @@ export const MaxTokenSlider = ({
       <input
         type='range'
         ref={inputRef}
-        value={_maxToken}
+        value={modelMaxToken[_model]}
         onChange={(e) => {
           _setMaxToken(Number(e.target.value));
         }}
