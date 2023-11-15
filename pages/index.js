@@ -47,7 +47,7 @@ const IndexPage = () => {
       <Script
         type='module'
         crossOrigin='anonymous'
-        src='./dist/assets/index-a555441c.js'
+        src='./dist/assets/index-516d0b93.js'
       />
 
       <Script
